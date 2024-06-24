@@ -1,0 +1,1261 @@
+2024.06.23 20:00:36 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@45072866]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3cf67eb7]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@45072866]
+2024.06.23 20:00:38 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.06.23 20:00:39 WARN  no build tool detected in workspace 'C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2024.06.23 20:00:39 WARN  Build server is not auto-connectable.
+Jun 23, 2024 8:01:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.06.23 20:01:19 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors_inJAVA.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:20 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors_inJAVA.java. Output:
+
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didSave",
+  "params": {
+    "textDocument": {
+      "uri": "file:///c%3A/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors_inJAVA.java"
+    },
+    "text": "public class Vehicle {\r\n  private String color;\r\n  Vehicle() {\r\n     color \u003d \"Red\";\r\n  }\r\n}\r\n\r\n/*Constructors\r\nConstructors are special methods invoked when an object is created and are used to initialize them. \r\n\r\nA constructor can be used to provide initial values for object attributes.\r\n\r\n- A constructor name must be same as its class name.\r\n\r\n- A constructor must have no explicit return type.\r\n\r\nExample of a constructor: */"
+  }
+}
+java.lang.IllegalStateException: An unexpected exception occurred while executing jsonrpc method public abstract java.util.concurrent.CompletableFuture scala.meta.metals.lsp.TextDocumentService.didSave(org.eclipse.lsp4j.DidSaveTextDocumentParams)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:73)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.file.NoSuchFileException: c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors_inJAVA.java
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:43)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:21)
+	at scala.meta.internal.mtags.ScalametaCommonEnrichments$XtensionAbsolutePath.toInput(ScalametaCommonEnrichments.scala:410)
+	at scala.meta.internal.metals.MetalsLspService.didSave(MetalsLspService.scala:892)
+	at scala.meta.internal.metals.ProjectMetalsLspService.didSave(ProjectMetalsLspService.scala:253)
+	at scala.meta.internal.metals.WorkspaceLspService.didSave(WorkspaceLspService.scala:417)
+	at scala.meta.metals.lsp.DelegatingScalaService.didSave(DelegatingScalaService.scala:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	... 11 more
+
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2024.06.23 20:01:43 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors_inJAVA.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2024.06.23 20:01:43 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors_inJAVA.java. Using presentation compiler with project's scala-library version: 3.3.3
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:243)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024.06.23 20:01:43 WARN  Running javac-semanticdb failed for file:///c:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors_inJAVA.java. Output:
+
+2024.06.23 20:01:43 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Vehicle.java. Output:
+
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+Jun 23, 2024 8:01:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 23
+Jun 23, 2024 8:01:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 18
+Jun 23, 2024 8:01:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 28
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+Jun 23, 2024 8:01:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-46-432.md
+2024.06.23 20:01:50 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-52-635.md
+2024.06.23 20:01:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-54-666.md
+Jun 23, 2024 8:01:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-54-933.md
+2024.06.23 20:01:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-55-736.md
+2024.06.23 20:01:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-55-980.md
+2024.06.23 20:01:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:01:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:01:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-01-59-639.md
+2024.06.23 20:02:15 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Vehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:02:15 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/XVehicle.java. Output:
+
+2024.06.23 20:02:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:15 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-15-721.md
+2024.06.23 20:02:17 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:17 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-17-511.md
+2024.06.23 20:02:17 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-18-375.md
+2024.06.23 20:02:18 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-18-685.md
+2024.06.23 20:02:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-40-621.md
+2024.06.23 20:02:50 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-51-014.md
+2024.06.23 20:02:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:02:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-02-52-917.md
+2024.06.23 20:03:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:03:02 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/XVehicle.java. Output:
+
+2024.06.23 20:03:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:03:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-03-02-594.md
+2024.06.23 20:03:17 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\XVehicle.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:03:17 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:03:18 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:03:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-03-18-192.md
+2024.06.23 20:16:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-35-528.md
+2024.06.23 20:16:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-36-302.md
+2024.06.23 20:16:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:16:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:16:37 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:16:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-38-090.md
+2024.06.23 20:16:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:16:38 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:16:38 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:16:39 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-39-130.md
+2024.06.23 20:16:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-40-115.md
+2024.06.23 20:16:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-40-262.md
+2024.06.23 20:16:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-40-909.md
+2024.06.23 20:16:42 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-43-004.md
+2024.06.23 20:16:42 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-43-722.md
+2024.06.23 20:16:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-44-960.md
+2024.06.23 20:16:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:16:54 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:16:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-54-950.md
+2024.06.23 20:16:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-58-443.md
+2024.06.23 20:16:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-58-735.md
+2024.06.23 20:16:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:16:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-16-59-737.md
+2024.06.23 20:16:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:00 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-00-501.md
+2024.06.23 20:17:01 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:01 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-01-330.md
+2024.06.23 20:17:01 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:01 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-01-573.md
+2024.06.23 20:17:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-02-613.md
+2024.06.23 20:17:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-02-992.md
+2024.06.23 20:17:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-03-326.md
+2024.06.23 20:17:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-03-928.md
+2024.06.23 20:17:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-05-037.md
+2024.06.23 20:17:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:05 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-05-507.md
+2024.06.23 20:17:10 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:10 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-10-323.md
+2024.06.23 20:17:10 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:10 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-10-989.md
+2024.06.23 20:17:12 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:12 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-12-245.md
+2024.06.23 20:17:12 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:12 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-12-564.md
+2024.06.23 20:17:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:15 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:17:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-16-030.md
+2024.06.23 20:17:18 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-18-599.md
+2024.06.23 20:17:19 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:19 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-19-774.md
+2024.06.23 20:17:22 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:22 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-22-889.md
+2024.06.23 20:17:22 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:23 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-23-021.md
+2024.06.23 20:17:25 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-25-702.md
+2024.06.23 20:17:30 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:30 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:31 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-31-073.md
+2024.06.23 20:17:31 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:31 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:17:31 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-31-399.md
+2024.06.23 20:17:30 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:31 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:32 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:17:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-32-445.md
+2024.06.23 20:17:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:32 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:17:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-32-905.md
+2024.06.23 20:17:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:34 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-35-063.md
+2024.06.23 20:17:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-44-362.md
+2024.06.23 20:17:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-44-531.md
+2024.06.23 20:17:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-45-498.md
+2024.06.23 20:17:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-46-135.md
+2024.06.23 20:17:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-52-547.md
+2024.06.23 20:17:52 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-52-880.md
+2024.06.23 20:17:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:53 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-53-413.md
+2024.06.23 20:17:53 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:53 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:53 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-53-901.md
+2024.06.23 20:17:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:55 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-55-275.md
+2024.06.23 20:17:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-56-005.md
+2024.06.23 20:17:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-57-175.md
+2024.06.23 20:17:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-57-445.md
+Jun 23, 2024 8:17:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-57-614.md
+2024.06.23 20:17:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:17:58 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:17:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:17:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-17-58-746.md
+2024.06.23 20:18:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-00-393.md
+2024.06.23 20:18:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-02-240.md
+2024.06.23 20:18:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-02-945.md
+2024.06.23 20:18:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-03-347.md
+2024.06.23 20:18:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:03 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-04-368.md
+2024.06.23 20:18:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-05-619.md
+2024.06.23 20:18:08 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:08 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-08-307.md
+2024.06.23 20:18:08 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:08 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-08-490.md
+2024.06.23 20:18:08 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:09 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-09-146.md
+2024.06.23 20:18:13 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java
+2024.06.23 20:18:13 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:13 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-13-500.md
+2024.06.23 20:18:14 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:14 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-14-667.md
+2024.06.23 20:18:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:15 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-15-872.md
+2024.06.23 20:18:31 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:31 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-31-788.md
+2024.06.23 20:18:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:34 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-34-635.md
+2024.06.23 20:18:34 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-35-368.md
+2024.06.23 20:18:35 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-35-749.md
+2024.06.23 20:18:35 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:36 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:36 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 418
+Jun 23, 2024 8:18:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-36-393.md
+2024.06.23 20:18:36 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:36 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:36 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-36-897.md
+2024.06.23 20:18:36 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:37 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:37 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-37-605.md
+2024.06.23 20:18:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-38-224.md
+2024.06.23 20:18:38 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:38 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-38-500.md
+2024.06.23 20:18:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:39 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:39 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-39-156.md
+2024.06.23 20:18:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:39 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-40-011.md
+2024.06.23 20:18:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:40 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-40-759.md
+Jun 23, 2024 8:18:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-40-879.md
+2024.06.23 20:18:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:40 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-41-088.md
+2024.06.23 20:18:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:42 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:42 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-42-080.md
+2024.06.23 20:18:42 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:42 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-42-294.md
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-43-350.md
+Jun 23, 2024 8:18:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-43-454.md
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-43-691.md
+Jun 23, 2024 8:18:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-43-862.md
+2024.06.23 20:18:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:43 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-44-021.md
+2024.06.23 20:18:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:44 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-45-009.md
+2024.06.23 20:18:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:45 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-46-050.md
+2024.06.23 20:18:46 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:46 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-46-980.md
+2024.06.23 20:18:47 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:46 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:47 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-47-759.md
+2024.06.23 20:18:47 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:48 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:48 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-48-401.md
+2024.06.23 20:18:48 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:48 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:48 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-48-815.md
+2024.06.23 20:18:49 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:49 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-49-377.md
+2024.06.23 20:18:49 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:50 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:50 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:50 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:50 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-50-810.md
+2024.06.23 20:18:50 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-51-123.md
+2024.06.23 20:18:50 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-51-398.md
+2024.06.23 20:18:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:18:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-51-843.md
+2024.06.23 20:18:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-52-431.md
+2024.06.23 20:18:52 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:54 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-54-284.md
+2024.06.23 20:18:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-54-769.md
+2024.06.23 20:18:54 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-58-653.md
+2024.06.23 20:18:58 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-58-839.md
+2024.06.23 20:18:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:58 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-59-248.md
+2024.06.23 20:18:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:59 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:18:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-59-677.md
+Jun 23, 2024 8:18:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-18-59-752.md
+2024.06.23 20:18:59 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:18:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:18:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:19:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-19-00-522.md
+2024.06.23 20:19:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:19:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:19:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-19-00-744.md
+2024.06.23 20:19:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:19:01 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:19:01 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-19-01-082.md
+2024.06.23 20:19:01 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:19:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:19:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-19-04-299.md
+2024.06.23 20:19:09 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:19:09 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-19-09-490.md
+2024.06.23 20:21:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:34 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-34-706.md
+2024.06.23 20:21:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-35-567.md
+2024.06.23 20:21:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-35-938.md
+2024.06.23 20:21:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-36-485.md
+2024.06.23 20:21:37 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:37 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-37-255.md
+2024.06.23 20:21:38 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:21:38 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-38-908.md
+2024.06.23 20:21:38 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:21:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:39 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-39-316.md
+2024.06.23 20:21:38 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:21:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:39 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-39-614.md
+2024.06.23 20:21:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:21:39 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:39 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-39-977.md
+2024.06.23 20:21:40 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:21:41 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java
+2024.06.23 20:21:41 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-41-407.md
+2024.06.23 20:21:42 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-43-023.md
+2024.06.23 20:21:42 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-43-637.md
+2024.06.23 20:21:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-44-202.md
+2024.06.23 20:21:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-44-528.md
+2024.06.23 20:21:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-56-196.md
+2024.06.23 20:21:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-56-382.md
+2024.06.23 20:21:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-56-757.md
+2024.06.23 20:21:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:21:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-57-639.md
+2024.06.23 20:21:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:21:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:21:58 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:21:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-21-58-682.md
+2024.06.23 20:22:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-00-988.md
+2024.06.23 20:22:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-02-305.md
+2024.06.23 20:22:02 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:04 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-05-050.md
+2024.06.23 20:22:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-05-574.md
+2024.06.23 20:22:18 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-18-989.md
+2024.06.23 20:22:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:22:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-52-017.md
+2024.06.23 20:22:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:52 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-53-192.md
+2024.06.23 20:22:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:53 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:53 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:22:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-53-508.md
+2024.06.23 20:22:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:53 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:53 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-53-981.md
+2024.06.23 20:22:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:53 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-54-393.md
+2024.06.23 20:22:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:54 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-54-784.md
+2024.06.23 20:22:54 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:55 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-55-243.md
+2024.06.23 20:22:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:55 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-55-875.md
+2024.06.23 20:22:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:56 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-56-530.md
+2024.06.23 20:22:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:56 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-56-980.md
+2024.06.23 20:22:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:57 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:22:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-57-667.md
+2024.06.23 20:22:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:22:59 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:22:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:22:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-22-59-514.md
+2024.06.23 20:23:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:00 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:00 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:01 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-01-116.md
+2024.06.23 20:23:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:03 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-03-399.md
+2024.06.23 20:23:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:04 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-04-951.md
+2024.06.23 20:23:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:05 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-05-937.md
+2024.06.23 20:23:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:07 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-07-841.md
+2024.06.23 20:23:09 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:09 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:09 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:09 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-09-576.md
+2024.06.23 20:23:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:15 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-15-533.md
+2024.06.23 20:23:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:15 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-15-666.md
+2024.06.23 20:23:15 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-16-331.md
+2024.06.23 20:23:18 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:18 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:18 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+Jun 23, 2024 8:23:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-18-157.md
+2024.06.23 20:23:20 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:20 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:20 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:20 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-20-242.md
+2024.06.23 20:23:21 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:21 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:21 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:21 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-21-467.md
+2024.06.23 20:23:23 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:23 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-23-960.md
+2024.06.23 20:23:23 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-24-553.md
+2024.06.23 20:23:25 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-25-279.md
+2024.06.23 20:23:26 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:26 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:26 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-26-404.md
+2024.06.23 20:23:27 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:27 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:27 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-27-865.md
+2024.06.23 20:23:27 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:28 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:27 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:28 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-28-878.md
+2024.06.23 20:23:30 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:30 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:30 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:30 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-30-505.md
+2024.06.23 20:23:33 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:33 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-33-314.md
+2024.06.23 20:23:33 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:33 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-33-856.md
+2024.06.23 20:23:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-35-304.md
+2024.06.23 20:23:35 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-35-647.md
+2024.06.23 20:23:49 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-49-079.md
+2024.06.23 20:23:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-51-521.md
+2024.06.23 20:23:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:55 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-55-461.md
+2024.06.23 20:23:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:55 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:55 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-55-971.md
+2024.06.23 20:23:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:57 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-57-253.md
+2024.06.23 20:23:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:57 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-57-845.md
+2024.06.23 20:23:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:23:58 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:23:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-58-206.md
+2024.06.23 20:23:58 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-58-961.md
+2024.06.23 20:23:59 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:23:59 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-23-59-631.md
+2024.06.23 20:24:01 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:01 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-01-429.md
+2024.06.23 20:24:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-03-182.md
+2024.06.23 20:24:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:24:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-03-755.md
+2024.06.23 20:24:03 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:24:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-04-013.md
+2024.06.23 20:24:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-04-427.md
+2024.06.23 20:24:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-04-620.md
+2024.06.23 20:24:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-05-263.md
+2024.06.23 20:24:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-05-652.md
+2024.06.23 20:24:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-05-905.md
+2024.06.23 20:24:05 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:06 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-06-530.md
+2024.06.23 20:24:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:24:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:24:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-07-577.md
+Jun 23, 2024 8:24:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-07-728.md
+2024.06.23 20:24:07 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Constructors.java. Output:
+
+2024.06.23 20:24:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-07-975.md
+2024.06.23 20:24:09 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java
+2024.06.23 20:24:09 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:24:09 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-24-09-316.md
+2024.06.23 20:55:09 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Constructors.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:45 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/MAth_abs.java. Output:
+
+2024.06.23 20:55:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\MAth_abs.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:45 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\MAth_abs.java
+2024.06.23 20:55:45 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/MAth_abs.java. Output:
+
+2024.06.23 20:55:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\MAth_abs.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:55:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-55-45-559.md
+2024.06.23 20:55:45 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\MAth_abs.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:45 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Program.java. Output:
+
+2024.06.23 20:55:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:55:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-55-45-811.md
+2024.06.23 20:55:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Program.java. Output:
+
+2024.06.23 20:55:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:55:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-55-51-629.md
+2024.06.23 20:55:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Program.java. Output:
+
+2024.06.23 20:55:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:55:52 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:55:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-55-52-238.md
+Jun 23, 2024 8:55:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-55-52-292.md
+2024.06.23 20:55:52 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Program.java. Output:
+
+2024.06.23 20:56:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:56:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-56-04-039.md
+2024.06.23 20:56:03 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:56:04 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Program.java. Output:
+
+2024.06.23 20:56:04 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:56:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-56-04-715.md
+2024.06.23 20:56:07 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:56:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-56-07-898.md
+2024.06.23 20:56:08 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java
+2024.06.23 20:56:08 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:56:08 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-56-08-802.md
+2024.06.23 20:56:10 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Program.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:02 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/CeilExample.java. Output:
+
+Jun 23, 2024 8:58:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-02-711.md
+2024.06.23 20:58:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:58:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-32-745.md
+2024.06.23 20:58:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:34 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:34 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/CeilExample.java. Output:
+
+Jun 23, 2024 8:58:34 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-34-547.md
+2024.06.23 20:58:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:43 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/CeilExample.java. Output:
+
+Jun 23, 2024 8:58:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-43-565.md
+2024.06.23 20:58:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:58:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-44-253.md
+2024.06.23 20:58:44 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:44 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/CeilExample.java. Output:
+
+Jun 23, 2024 8:58:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-44-524.md
+2024.06.23 20:58:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:45 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:58:45 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/CeilExample.java. Output:
+
+Jun 23, 2024 8:58:45 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-58-45-401.md
+2024.06.23 20:59:19 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java
+2024.06.23 20:59:19 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\CeilExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:59:19 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-59-19-855.md
+2024.06.23 20:59:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/FloorExample.java. Output:
+
+2024.06.23 20:59:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:59:51 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java
+2024.06.23 20:59:51 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/FloorExample.java. Output:
+
+2024.06.23 20:59:51 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:59:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-59-51-433.md
+2024.06.23 20:59:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:59:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:59:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-59-56-476.md
+2024.06.23 20:59:56 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 20:59:57 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 8:59:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_20-59-57-166.md
+2024.06.23 20:59:58 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/FloorExample.java. Output:
+
+Jun 23, 2024 9:00:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.06.23 21:00:18 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java
+2024.06.23 21:00:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:00:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-00-32-576.md
+2024.06.23 21:00:33 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:00:33 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-00-33-292.md
+2024.06.23 21:03:16 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:03:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-03-16-947.md
+2024.06.23 21:04:36 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\FloorExample.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:04:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-04-36-578.md
+2024.06.23 21:05:40 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/StaticEX.java. Output:
+
+2024.06.23 21:05:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:05:40 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java
+2024.06.23 21:05:40 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/StaticEX.java. Output:
+
+2024.06.23 21:05:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-41-070.md
+2024.06.23 21:05:40 INFO  Report absolute-path: ### java.nio.file.NoSuchFileException: c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java
+
+Uri: file:///c%3A/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/StaticEX.java
+
+
+#### Error stacktrace:
+
+```
+java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:96)
+	java.base/sun.nio.fs.WindowsLinkSupport.getRealPath(WindowsLinkSupport.java:258)
+	java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:933)
+	java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:42)
+	scala.meta.internal.mtags.ScalametaCommonEnrichments$XtensionAbsolutePath.dealias(ScalametaCommonEnrichments.scala:312)
+	scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:133)
+	scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:756)
+	scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:753)
+	scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePathSafe(MetalsEnrichments.scala:739)
+	scala.meta.internal.metals.WorkspaceLspService.getServiceForOpt(WorkspaceLspService.scala:305)
+	scala.meta.internal.metals.WorkspaceLspService.getServiceFor(WorkspaceLspService.scala:314)
+	scala.meta.internal.metals.WorkspaceLspService.codeAction(WorkspaceLspService.scala:522)
+	scala.meta.metals.lsp.DelegatingScalaService.codeAction(DelegatingScalaService.scala:146)
+	jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	java.base/java.lang.Thread.run(Thread.java:833)
+```
+
+2024.06.23 21:05:40 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:05:40 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Counter.java. Output:
+
+2024.06.23 21:05:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-41-410.md
+2024.06.23 21:05:40 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-41-811.md
+2024.06.23 21:05:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-43-685.md
+2024.06.23 21:05:43 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:44 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-44-102.md
+2024.06.23 21:05:46 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-46-340.md
+2024.06.23 21:05:46 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:05:47 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-47-232.md
+2024.06.23 21:05:47 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:05:47 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-47-728.md
+2024.06.23 21:05:47 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-47-947.md
+2024.06.23 21:05:47 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/Counter.java. Output:
+
+2024.06.23 21:05:48 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java
+2024.06.23 21:05:48 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:05:48 INFO  no build target found for c:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\Counter.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-49-023.md
+2024.06.23 21:05:49 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/StaticEX.java. Output:
+
+2024.06.23 21:05:49 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:05:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-05-49-220.md
+2024.06.23 21:06:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:06:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-06-02-353.md
+2024.06.23 21:06:02 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:06:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-06-02-830.md
+2024.06.23 21:06:06 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:06:06 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-06-06-772.md
+2024.06.23 21:06:06 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:06:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-06-07-106.md
+2024.06.23 21:07:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:07:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:07:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-07-32-489.md
+2024.06.23 21:07:32 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/StaticEX.java. Output:
+
+2024.06.23 21:07:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:07:32 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.23 21:07:33 WARN  Running javac-semanticdb failed for file:///C:/Users/USER/Downloads/%23SOLOLEARN/JAVA%20Sololearn/JAVA%20CODES/StaticEX.java. Output:
+
+Jun 23, 2024 9:07:33 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-07-33-383.md
+2024.06.23 21:07:36 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java
+2024.06.23 21:07:36 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 9:07:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_21-07-36-285.md
+2024.06.23 22:08:22 WARN  no build target for: C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java
+2024.06.23 22:08:22 INFO  no build target found for C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\StaticEX.java. Using presentation compiler with project's scala-library version: 3.3.3
+Jun 23, 2024 10:08:22 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\USER\Downloads\#SOLOLEARN\JAVA Sololearn\JAVA CODES\.metals\.reports\metals-full\2024-06-23\r_compiler-error_22-08-22-261.md
+2024.06.23 22:10:26 INFO  Shutting down server
+2024.06.23 22:10:26 INFO  shutting down Metals
+2024.06.23 22:10:26 INFO  Exiting server
